@@ -1,69 +1,75 @@
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    @IBOutlet var foodPickerView: UIPickerView! // 食べ物のPickerView
-    @IBOutlet var drinkPickerView: UIPickerView! // 飲み物のPickerView
-    
-    // 飲み物のデータの配列
-    var drinkArray: [String] = [
-        "爽健美茶",
-        "麦茶",
-        "コーラ",
-        "オレンジジュース",
-        "天然水"
-    ]
-    
-    // 食べ物のデータの配列
-    var foodArray: [String] = [
-        "ラーメン",
-        "トマト",
-        "生ハム",
-        "きゅうり",
-        "納豆",
-        "お米"
-    ]
-    
+class ViewController: UIViewController {
+
+    //1個目、動物のUIPickerViewの選択内容を表示するUILabel
+    @IBOutlet weak var animalLabel: UILabel!
+
+    // 1個目、動物のUIPickerView
+    @IBOutlet weak var animalPickerView: UIPickerView!
+
+    // 2個目、フルーツのUILabel
+    @IBOutlet weak var fruitLabel: UILabel!
+
+    // 2個目、フルーツのUIPickerView
+    @IBOutlet weak var fruitPickerView: UIPickerView!
+
+    // 1個目、動物のUIPickerViewに表示する値の配列
+    var animalValue = ["犬", "猫", "兎", "狐"]
+
+    // 2個目、フルーツのUIPickerViewに表示する値の配列
+    var fruitValue = ["リンゴ", "オレンジ", "ブドウ", "バナナ"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        foodPickerView.tag = 1
-        drinkPickerView.tag = 2
-        // データソースの設定
-        drinkPickerView.dataSource = self
-        foodPickerView.dataSource = self
-        
-        // デリゲートの設定
-        drinkPickerView.delegate = self
-        foodPickerView.delegate = self
-    }
+        animalPickerView.dataSource = self
+        animalPickerView.delegate = self
+        fruitPickerView.dataSource = self
+        fruitPickerView.delegate = self
+        animalPickerView.tag = 1
+        fruitPickerView.tag = 1
 
-    // PickerView一つあたりのの列の数
+    }
+}
+
+// UIPickerViewに表示設定
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+
+    // UIPickerViewの列の数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    // PickerView一つあたりの行の数
+
+    // UIPickerViewの行数（要素の数）
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        if pickerView == foodPickerView {
-            return foodArray.count
+        if pickerView === animalPickerView {
+            return animalValue.count
+        } else if pickerView === fruitPickerView {
+            return fruitValue.count
+        } else {
+            return animalValue.count
         }
-        
-        if pickerView == drinkPickerView {
-            return drinkArray.count
-        }
-        
-        return 0
     }
 
+    // UIPickerViewに表示する配列（内容）
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == foodPickerView {
-            return foodArray[row]
+        if pickerView === animalPickerView {
+            return animalValue[row]
+        } else if pickerView === fruitPickerView {
+            return fruitValue[row]
+        } else {
+            return animalValue[row]
         }
-        if pickerView == drinkPickerView {
-            return drinkArray[row]
-        }
-        return nil
     }
 
+    // UIPickerViewが選択された時の挙動
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView === animalPickerView {
+            animalLabel.text = animalValue[row]
+        } else if pickerView === fruitPickerView {
+            fruitLabel.text = fruitValue[row]
+        } else {
+            animalLabel.text = animalValue[row]
+        }
+    }
 }
