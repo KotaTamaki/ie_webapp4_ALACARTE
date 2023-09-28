@@ -10,7 +10,7 @@
 		F6ADE1922AC2B3E900AC3C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE1912AC2B3E900AC3C06 /* AppDelegate.swift */; };
 		F6ADE1942AC2B3E900AC3C06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE1932AC2B3E900AC3C06 /* SceneDelegate.swift */; };
 		F6ADE1962AC2B3E900AC3C06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE1952AC2B3E900AC3C06 /* ViewController.swift */; };
-		F6ADE1992AC2B3E900AC3C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6ADE1972AC2B3E900AC3C06 /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
+		F6ADE1992AC2B3E900AC3C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6ADE1972AC2B3E900AC3C06 /* Main.storyboard */; };
 		F6ADE19B2AC2B3EA00AC3C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6ADE19A2AC2B3EA00AC3C06 /* Assets.xcassets */; };
 		F6ADE19E2AC2B3EA00AC3C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6ADE19C2AC2B3EA00AC3C06 /* LaunchScreen.storyboard */; };
 		F6ADE1A92AC2B3EA00AC3C06 /* A_LA_CARTETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADE1A82AC2B3EA00AC3C06 /* A_LA_CARTETests.swift */; };
@@ -190,9 +190,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				KnownAssetTags = (
-					1,
-				);
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
@@ -445,6 +442,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7QUB77QZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "A LA CARTE/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -472,6 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7QUB77QZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "A LA CARTE/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
