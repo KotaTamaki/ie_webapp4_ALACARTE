@@ -13,7 +13,7 @@ class I1_ViewController: UIViewController {
 
     @IBOutlet weak var I1: UILabel! // ランダムな単語を表示するUILabel
 
-        let words = ["りんご", "バナナ", "みかん", "いちご", "ぶどう", "すいか"]
+        let words = ["マルゲリータ", "フォカッチャ", "パネトーネ", "マリトッツォ", "グリッシーニ"]
 
         override func viewDidLoad() {
             super.viewDidLoad()
