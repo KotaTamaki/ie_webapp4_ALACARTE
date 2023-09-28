@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  A LA CARTE
+//  CustomPickerViewSample
 //
-//  Created by 玉城航汰 on 2023/09/26.
+//  Created by Fumiya Tanaka on 2021/07/27.
 //
 
 import UIKit
